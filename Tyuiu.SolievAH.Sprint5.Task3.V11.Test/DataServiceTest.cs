@@ -12,7 +12,7 @@ namespace Tyuiu.SolievAH.Sprint5.Task3.V11.Test
         public void TestMethod1()
         {
             DataService resp = new DataService();
-            Assert.AreEqual(-2.556, resp.SaveToFileTextData(3));
+            Assert.AreEqual("-2,556", resp.SaveToFileTextData(3));
         }
     }
 }
