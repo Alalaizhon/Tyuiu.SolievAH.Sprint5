@@ -1,31 +1,34 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using System.IO;
 using Tyuiu.SolievAH.Sprint5.Task6.V28.Lib;
-namespace Tyuiu.SolievAH.Sprint5.Task5.V3.Test
+using System.IO;
+
+namespace Tyuiu.SolievAH.Sprint5.Task6.V28.Test
 {
     [TestClass]
     public class DataServiceTest
     {
         [TestMethod]
-        public void CheckExistsFile()
+        public void TestMethod1()
         {
-            string path = @"C:\DataSprint5\InPutDataFileTask5V3.txt";
+            string path = @"C:\DataSprint5\InPutDataFileTask6V28.txt";
 
             FileInfo fileInfo = new FileInfo(path);
             bool fileExists = fileInfo.Exists;
             bool wait = true;
             Assert.AreEqual(wait, fileExists);
+
+
         }
         [TestMethod]
-        public void CheckRes()
+        public void CheckResult()
         {
             DataService ds = new DataService();
 
-            string path = @"C:\DataSprint5\InPutDataFileTask5V3.txt";
+            string path = @"C:\DataSprint5\InPutDataFileTask6V28.txt";
 
             var res = ds.LoadFromDataFile(path);
-            int wait = 2;
+            int wait = 3;
             Assert.AreEqual(wait, res);
         }
     }
