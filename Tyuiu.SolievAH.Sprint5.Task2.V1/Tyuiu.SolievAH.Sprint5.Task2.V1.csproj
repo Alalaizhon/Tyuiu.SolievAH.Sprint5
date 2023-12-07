@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{91FA489B-2E47-4E41-AB9B-9BF020BFCB72}</ProjectGuid>
+    <ProjectGuid>{F4D5F96F-2375-49DA-B420-FBDBE2B3EF4B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Tyuiu.SolievAH.Sprint5.Task2.V15</RootNamespace>
-    <AssemblyName>Tyuiu.SolievAH.Sprint5.Task2.V15</AssemblyName>
+    <RootNamespace>Tyuiu.SolievAH.Sprint5.Task2.V1</RootNamespace>
+    <AssemblyName>Tyuiu.SolievAH.Sprint5.Task2.V1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,12 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Tyuiu.SolievAH.Sprint5.Task2.V15.Lib\Tyuiu.SolievAH.Sprint5.Task2.V15.Lib.csproj">
-      <Project>{014c4602-af2c-43bc-a9ef-2c3e8565f556}</Project>
-      <Name>Tyuiu.SolievAH.Sprint5.Task2.V15.Lib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
