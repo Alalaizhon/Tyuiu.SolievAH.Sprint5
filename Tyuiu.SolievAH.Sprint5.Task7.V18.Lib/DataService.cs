@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using tyuiu.cources.programming.interfaces.Sprint5;
 using System.IO;
-using System.Text.RegularExpressions;
+
 
 namespace Tyuiu.SolievAH.Sprint5.Task7.V18.Lib
 {
@@ -22,14 +22,24 @@ namespace Tyuiu.SolievAH.Sprint5.Task7.V18.Lib
                 File.Delete(pathSaveFile);
             }
 
-            path = @"C:\DataSprint5\InPutDataFileTask7V18.txt";
-            string fileContent = File.ReadAllText(path);
-            string replace = Regex.Replace(fileContent, @"н", "нн");
-            File.AppendAllText(pathSaveFile, replace + Environment.NewLine);
-
-            return pathSaveFile ;
-
-            // https://pstrtns.screenshotmaker.repl.co/ 
+            string strL = "";
+            using (StreamReader reader = new StreamReader(path))
+            {
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    for (int i = 0; i < line.Length; i++)
+                    {
+                        if (line[i] == 'н') { strL = strL + "нн"; }
+                        else { strL = strL + Convert.ToString(line[i]); }
+                    }
+                    File.AppendAllText(pathSaveFile, strL + Environment.NewLine);
+                    strL = "";
+                }
+            }
+            return pathSaveFile;
         }
+        // https://pstrtns.screenshotmaker.repl.co/ 
     }
+    
 }
