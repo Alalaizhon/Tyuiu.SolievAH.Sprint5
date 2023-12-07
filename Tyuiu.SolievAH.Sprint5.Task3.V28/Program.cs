@@ -3,32 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.SolievAH.Sprint5.Task3.V11.Lib;
+using Tyuiu.SolievAH.Sprint5.Task3.V28.Lib;
 
-namespace Tyuiu.SolievAH.Sprint5.Task3.V11
+namespace Tyuiu.SolievAH.Sprint5.Task3.V28
 {
     class Program
     {
         static void Main(string[] args)
         {
-            DataService ds = new DataService();
+            int x = 3;
 
-            Console.Title = "Спринт #5 | Выполнил: Солиев А.Х | СМАРТб-23-1";
+            DataService ds = new DataService();
+            Console.Title = "Спринт #5 | Выполнила: Солиев А.Х. | СМАРТБ-23-1";
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* Спринт #5                                                               *");
-            Console.WriteLine("* Тема: Класс File. Запись данных в текстовый фай                         *");
+            Console.WriteLine("* Тема: Обработка файлов                                                  *");
             Console.WriteLine("* Задание #3                                                              *");
-            Console.WriteLine("* Вариант #11                                                             *");
-            Console.WriteLine("* Выполнил: Солиев Алижон Хотамжонович | СМАРТб-23-1                      *");
+            Console.WriteLine("* Вариант #28                                                             *");
+            Console.WriteLine("* Выполнила: Солиев Алижон Хотамжонович | СМАРТБ-23-1                     *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                *");
+            Console.WriteLine("* Дано выражение, вычислить его значение при x = 3                        *");
+            Console.WriteLine("* результат сохранить в бинарный файл OutPutFileTask3.bin                 *");
+            Console.WriteLine("* и вывести на консоль. Округлить до трёх знаков после запятой.           *");
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
             Console.WriteLine("***************************************************************************");
+
+            Console.WriteLine("x = " + x);
+
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine(ds.SaveToFileTextData(3));
+
+            string res = ds.SaveToFileTextData(x);
+
+            Console.WriteLine("Файл: " + res);
+            Console.WriteLine("Создан!");
             Console.ReadKey();
         }
     }
